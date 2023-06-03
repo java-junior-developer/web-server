@@ -19,9 +19,9 @@ public class CatController {
     }
 
     @PostMapping
-    public Cat update(@RequestBody Cat userRequest) {
-        if (!catService.reserve(userRequest)) return null;
-        return userRequest;
+    public Cat update(@RequestBody Cat userChoice) {
+        if (!catService.reserveCat(userChoice)) return null;
+        return userChoice;
     }
 
 
